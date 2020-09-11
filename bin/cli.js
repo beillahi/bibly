@@ -37,6 +37,8 @@ let cli = meow(`
     console.log(`warning: could not read bibly.json`);
   }
 
+  console.log(cli.flags);
+
   if (cli.flags.latex)
     entries = await bibly.getEntries(cli.flags.latex, cli.flags.databases);
 
